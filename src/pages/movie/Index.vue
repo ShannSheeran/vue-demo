@@ -7,9 +7,10 @@
         <div class="movie-title">
           <div>{{moviesInfo.title}}</div>
         </div>
+        <router-view></router-view>
         <div class="clear"></div>
         <div class="movie-card">
-          <a class="movie-item" v-for="item in moviesInfo.subjects">
+          <a class="movie-item" v-for="item in moviesInfo.subjects" v-bind:href="item.id">
             <div class="movie-cover">
               <img v-bind:src="item.images.medium"/>
             </div>
@@ -42,13 +43,13 @@
     mounted(){
       get(api).then(data => {
         this.moviesInfo = data;
-        this.loading=false;
+        this.loading = false;
       })
     },
     components: {
       'movie-head': Head,
       'movie-search': Search,
-      'spinner':Spinner
+      'spinner': Spinner
     }
   }
 </script>
@@ -66,8 +67,15 @@
   }
 
   #movie-list .movie-card {
+    display: block;
+    width: 100%;
+    height: 37rem;
     margin-top: 1rem;
     border-radius: 2rem;
+  }
+
+  movie-list .movie-card a {
+    text-decoration: none;
   }
 
   #movie-list .movie-item {
