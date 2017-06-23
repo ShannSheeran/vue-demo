@@ -15,18 +15,16 @@
 <style>
   .ball-clip-rotate > div {
     z-index:9999999;
-    color: #38c167;
+    color: #42b983 !important;
     background-color: #38c167 !important;
-    width: 15px;
-    height: 15px;
+    width: 2rem;
+    height: 2rem;
     border-radius: 100%;
-    margin: 2px;
+    margin: 1rem;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    border: 2px solid #fff;
+    border: 0.1rem solid #38c167;
     border-bottom-color: transparent;
-    height: 25px;
-    width: 25px;
     background: transparent !important;
     display: inline-block;
     -webkit-animation: rotate 0.75s 0s linear infinite;

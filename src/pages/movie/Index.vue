@@ -7,10 +7,9 @@
         <div class="movie-title">
           <div>{{moviesInfo.title}}</div>
         </div>
-        <router-view></router-view>
         <div class="clear"></div>
         <div class="movie-card">
-          <a class="movie-item" v-for="item in moviesInfo.subjects" v-bind:href="item.id">
+          <a class="movie-item" v-for="item in moviesInfo.subjects" href="/#/movie/detail">
             <div class="movie-cover">
               <img v-bind:src="item.images.medium"/>
             </div>
@@ -61,6 +60,7 @@
   }
 
   .movie-section {
+    position: relative;
     display: block;
     background: #eee;
     margin-top: 1rem;
@@ -92,7 +92,11 @@
     padding: 0.5rem;
     height: 2rem;
   }
-
+  #spinner{
+    top:4rem;
+    left: 45%;
+    position: absolute;
+  }
   #movie-list .movie-text .title {
     font-size: 0.8rem;
     text-align: center;
