@@ -7,6 +7,7 @@ Vue.use(VueAxios, axios);
 
 const api = 'api/movie/coming_soon?start=0&count=9';
 
+
 let get=(url)=>{
   return new Promise((resolve, reject)=> {
     Vue.axios.get(url)
@@ -16,6 +17,17 @@ let get=(url)=>{
   })
 }
 
-export {get, api}
+let getMovieDetail = (mid)=>{
+  let url = 'api/movie/subject/'+mid;
+  return new Promise((resolve, reject)=> {
+    Vue.axios.get(url)
+      .then(response => {
+        resolve(response.data);
+      })
+  })
+
+}
+
+export {get, api, getMovieDetail}
 
 

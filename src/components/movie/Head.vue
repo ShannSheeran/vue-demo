@@ -1,7 +1,7 @@
 <template>
   <div id="movie-head">
     <div class="movie-head">
-      <router-link :to="{name:'movie/index'}">电影</router-link>
+      <router-link :to="{name:'movie/list'}">电影</router-link>
     </div>
   </div>
 </template>

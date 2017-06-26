@@ -8,7 +8,9 @@ import list from '@/pages/shop/list'
 import test from '@/pages/shop/test'
 import input from '@/components/BigInput'
 import MovieIndex from '@/pages/movie/Index'
+import MovieList from '@/pages/movie/List'
 import Detail from '@/pages/movie/Detail'
+import SearchList from '@/pages/movie/SearchList'
 
 Vue.use(Router)
 Vue.use(Vuex)
@@ -54,6 +56,16 @@ export default new Router({
           path: '/movie/detail',
           name: 'movie/detail',
           component: Detail,
+        },
+        {
+          path: '/movie/list',
+          name: 'movie/list',
+          component: MovieList,
+        },
+        {
+          path: '/movie/search/list',
+          name: 'movie/search/list',
+          component: SearchList,
         }
       ]
     }
