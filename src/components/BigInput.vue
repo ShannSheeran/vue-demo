@@ -2,7 +2,7 @@
     <div id="input">
         <div class="my-input">
             <span class="input-increcement" v-on:click="reduce">-</span>
-            <input v-model="value" class="input-text" type="text" v-on:change="input" />
+            <input v-model="value" class="input-text" type="text" @change="input" />
             <span class="input-reduce" v-on:click="increcement">+</span>
         </div>
     </div>
@@ -36,16 +36,20 @@
     }
 </script>
 
-<style>
+<style scoped>
+    #input{
+      width: 3rem !important;
+    }
     .my-input{
         padding: 0.5px 1px;
-        width: 5rem;
+        width: 3rem;
         height: 1.5rem;
         line-height: 2rem;
         border: 0.001rem solid #30b3fb;
         border-radius: 0.2rem;
         display: flex;
         flex-direction: row;
+        margin: 0!important;
     }
     .input-increcement{
 

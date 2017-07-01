@@ -64,7 +64,7 @@
   }
 
   #movies-detail {
-    padding: 0 1rem;
+    padding: 0 1rem 1rem 1rem;
   }
 
   .movie-view {
@@ -76,6 +76,7 @@
 
   .movie-view span {
     margin: 0 1rem;
+    border-radius: 0.25rem;
     display: block;
     width: 50%;
     line-height: 2rem;

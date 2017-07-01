@@ -11,6 +11,16 @@ import MovieIndex from '@/pages/movie/Index'
 import MovieList from '@/pages/movie/List'
 import Detail from '@/pages/movie/Detail'
 import SearchList from '@/pages/movie/SearchList'
+import vscroll from '@/components/common/scroll'
+
+
+//Mall Router
+import MallIndex from '@/pages/mall/Index'
+import MallGoodsList from '@/pages/mall/GoodsList'
+import MallGoodsDetail from '@/pages/mall/GoodsDetail'
+import MallCart from '@/pages/mall/Cart'
+
+
 
 Vue.use(Router)
 Vue.use(Vuex)
@@ -68,6 +78,34 @@ export default new Router({
           component: SearchList,
         }
       ]
+    },
+    //Mall
+    {
+      path:'/mall',
+      name:'mall',
+      component:MallIndex,
+      children:[
+        {
+          path: '/mall/goods',
+          name: 'mall-goods',
+          component: MallGoodsList,
+        },
+        {
+          path: '/mall/goods-detail/:id',
+          name: 'mall-goods-detail',
+          component: MallGoodsDetail,
+        }
+      ]
+    },
+    {
+      path:'/mall/cart',
+      name:'mall-cart',
+      component:MallCart,
+    },
+    {
+      path:'/scroll',
+      name:'scroll',
+      component:vscroll
     }
 
   ]

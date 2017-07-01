@@ -39,7 +39,6 @@
                 this.goods = goodsDetail(this.$route.params.id);
             },
             addToCart(){
-                this.num++;
                 if (this.value == 0) return;
                 addGoodsToCart(this.goods.id, this.value);
             },

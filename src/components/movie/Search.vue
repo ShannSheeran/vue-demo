@@ -14,12 +14,14 @@
     },
     methods: {
       search(){
-        if (this.query == '') {
-          alert('query can not be null');
-          return false;
-        }
-        this.$router.push({name: 'movie/search/list', params:{query:this.query}});
-      }
+        if (this.$route.name == 'movie/search/list') {
+          this.$router.replace({name: 'movie/search/list', query: {query: this.query}});
+          this.query = '';
+          return;
+        };
+        this.$router.push({name: 'movie/search/list', query: {query: this.query}});
+        this.query = '';
+      },
     }
   }
 </script>

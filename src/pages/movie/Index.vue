@@ -1,8 +1,10 @@
 <template>
   <div id="movie-list">
-    <div>
+    <div class="nav-bar">
       <movie-head></movie-head>
       <movie-search></movie-search>
+    </div>
+    <div class="r-view">
       <router-view></router-view>
     </div>
   </div>
@@ -20,18 +22,26 @@
     },
     created(){
       this.$router.push({name: 'movie/list'});
-    },
-    mounted(){
-
+      window.title='电影';
     },
     components: {
       'movie-head': Head,
       'movie-search': Search,
       'movie-list': List,
     },
-    watch: {
-
-    }
   }
 </script>
+
+<style>
+  #movie-list .nav-bar{
+    width: 100%;
+    position: fixed;
+    top:0;
+    z-index: 9999999999;
+    background: #ffffff;
+  }
+  #movie-list .r-view{
+    margin-top: 5rem;
+  }
+</style>
 

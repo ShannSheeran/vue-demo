@@ -5,10 +5,10 @@ Vue.use(VueAxios, axios);
 
 //coming-soon movies
 
-const api = 'api/movie/coming_soon?start=0&count=9';
 
 
-let get=(url)=>{
+let get=(page, pageSize)=>{
+  let url = `api/movie/coming_soon?start=${page}&count=${pageSize}`
   return new Promise((resolve, reject)=> {
     Vue.axios.get(url)
       .then(response => {
@@ -17,8 +17,8 @@ let get=(url)=>{
   })
 }
 
-let getMovieDetail = (mid)=>{
-  let url = 'api/movie/subject/'+mid;
+let getMovieDetail = (id)=>{
+  let url = `api/movie/subject/${id}`;
   return new Promise((resolve, reject)=> {
     Vue.axios.get(url)
       .then(response => {
@@ -28,6 +28,16 @@ let getMovieDetail = (mid)=>{
 
 }
 
-export {get, api, getMovieDetail}
+let searchMovie = (query, start, size)=>{
+  let url = `api/movie/search?q=${query}&start=${start}&count=${size}`;
+  return new Promise((resolve, reject)=> {
+    Vue.axios.get(url)
+      .then(response => {
+        resolve(response.data);
+      })
+  })
+}
+
+export {get, getMovieDetail, searchMovie}
 
 
