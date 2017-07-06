@@ -31,7 +31,7 @@
           <div class="show-mask" @click="showMask">....</div>
         </div>
         <div class="mall-view-cart">
-          <router-link :to="{name:'Hello'}">查看购物车🛒</router-link>
+          <router-link :to="{name:'mall-cart'}">查看购物车🛒</router-link>
         </div>
       </div>
 

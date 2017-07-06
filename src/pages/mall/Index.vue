@@ -21,6 +21,11 @@
     components: {
       'mall-header': Header,
       'mall-search': SearchBar
+    },
+    watch: {
+      "$route": function (to, from) {
+          if(to.name == 'mall' && from.name == 'mall-goods') this.$router.push({path: '/'});
+      }
     }
   }
 </script>
@@ -30,10 +35,12 @@
     animation-name: fold-in;
     animation-duration: .5s;
   }
+
   .fold-leave-active {
     animation-name: fold-out;
     animation-duration: .5s;
   }
+
   @keyframes fold-in {
     0% {
       transform: translate3d(0, 100%, 0);
@@ -45,6 +52,7 @@
       transform: translate3d(0, 0, 0);
     }
   }
+
   @keyframes fold-out {
     0% {
       transform: translate3d(0, 0, 0);
