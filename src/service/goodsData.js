@@ -52,7 +52,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-3846673-3846673#1-1#1-1#bingoVis",
     "showSimilar": "0",
-    "type": "0"
+    "type": "0",
+    storeId: 23,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -76,7 +82,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-3553539-3553539#1-1#1-1#bingoVis",
     "showSimilar": "1",
-    "type": "0"
+    "type": "0",
+    storeId: 24,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -100,7 +112,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-2402694-2402694#1-1#1-1#bingoVis",
     "showSimilar": "1",
-    "type": "0"
+    "type": "0",
+    storeId: 25,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -124,7 +142,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-4390094-4390094#1-1#1-1#bingoVis",
     "showSimilar": "0",
-    "type": "0"
+    "type": "0",
+    storeId: 26,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -148,7 +172,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-3701781-3701781#1-1#1-1#bingoVis",
     "showSimilar": "1",
-    "type": "0"
+    "type": "0",
+    storeId: 27,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -172,7 +202,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-3984704-3984704#1-1#1-1#bingoVis",
     "showSimilar": "1",
-    "type": "0"
+    "type": "0",
+    storeId: 28,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -196,7 +232,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-3752980-3752980#1-1#1-1#bingoVis",
     "showSimilar": "0",
-    "type": "0"
+    "type": "0",
+    storeId: 29,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -220,7 +262,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-3315699-3315699#1-1#1-1#bingoVis",
     "showSimilar": "1",
-    "type": "0"
+    "type": "0",
+    storeId: 30,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -244,7 +292,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-10931044507-10931044507#1-1#1-1#bingoVis",
     "showSimilar": "1",
-    "type": "0"
+    "type": "0",
+    storeId: 31,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -268,7 +322,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-11284596060-11284596060#1-1#1-1#bingoVis",
     "showSimilar": "0",
-    "type": "0"
+    "type": "0",
+    storeId: 32,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -292,7 +352,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-11308069989-11308069989#1-1#1-1#bingoVis",
     "showSimilar": "1",
-    "type": "0"
+    "type": "0",
+    storeId: 33,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -316,7 +382,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-10979250498-10979250498#1-1#1-1#bingoVis",
     "showSimilar": "1",
-    "type": "0"
+    "type": "0",
+    storeId: 34,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -340,7 +412,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-10867208778-10867208778#1-1#1-1#bingoVis",
     "showSimilar": "0",
-    "type": "0"
+    "type": "0",
+    storeId: 35,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -364,7 +442,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-4225470-4225470#1-1#1-1#bingoVis",
     "showSimilar": "1",
-    "type": "0"
+    "type": "0",
+    storeId: 36,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -388,7 +472,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-3984700-3984700#1-1#1-1#bingoVis",
     "showSimilar": "1",
-    "type": "0"
+    "type": "0",
+    storeId: 37,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -412,7 +502,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-3553571-3553571#1-1#1-1#bingoVis",
     "showSimilar": "0",
-    "type": "0"
+    "type": "0",
+    storeId: 38,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -436,7 +532,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-10931271165-10931271165#1-1#1-1#bingoVis",
     "showSimilar": "1",
-    "type": "0"
+    "type": "0",
+    storeId: 39,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -460,7 +562,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-11193025108-11193025108#1-1#1-1#bingoVis",
     "showSimilar": "1",
-    "type": "0"
+    "type": "0",
+    storeId: 40,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -484,7 +592,13 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-10931044508-10931044508#1-1#1-1#bingoVis",
     "showSimilar": "0",
-    "type": "0"
+    "type": "0",
+    storeId: 42,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   },
   {
     "needBeansFlag": "N",
@@ -508,20 +622,68 @@ let mallGoods = [
     "areaStk": "Y",
     "expoSrv": "464435_00033093-02070998-10979250499-10979250499#1-1#1-1#bingoVis",
     "showSimilar": "1",
-    "type": "0"
+    "type": "0",
+    storeId: 43,
+    attr: {
+      color: ['红色', '紫色', '白色', '银色', '深空灰'],
+      size: ['16G', '32G', '64G', '128G', '256G'],
+      suit: ['公开版', '双网通']
+    }
   }
 ];
 
 
-let getMallGoodsDetail = (id)=>{
+let getMallGoodsDetail = (id) => {
   let data = [];
-  mallGoods.map((item,key)=>{
+  mallGoods.map((item, key) => {
     if (item.skuId == id) data = item;
   });
   return data;
-}
+};
 
+let addToCart = (data) => {
+  let goodsId = data.id;
+  let attr = data.attr;
+  let num = data.num;
+  let name = data.name;
+  let img = data.img;
+  let price = data.price;
+  let goodsData = {id: goodsId, attr: attr, num: num, name:name, img:img, price:price};
+  let hasCart = getOneCartGoods(goodsId);
+  let hasAllCart = getCartGoods();
+  if (hasAllCart == undefined) hasAllCart = [];
+  if (hasCart.length <= 0) {
+    hasAllCart.push(goodsData);
+  } else {
+    let m = '';
+    let flag = false;
+    hasAllCart.forEach((val, key) => {
+      if (val.attr == attr) {
+        flag = true;
+        hasAllCart[key].num = val.num+num;
+      }else{
+        m = {id:goodsId, attr:attr, num:num,  name:name, img:img, price:price};
+      }
+    });
+    if(m && !flag) hasAllCart.push(m);
+  }
+  localStorage.setItem('cart', JSON.stringify(hasAllCart));
+};
 
+let getCartGoods = () => {
+  let goodsList = localStorage.getItem('cart');
+  if (goodsList) return JSON.parse(goodsList);
+};
+
+let getOneCartGoods = (id) => {
+  let goods = getCartGoods();
+  if (!goods || goods.length <= 0) return [];
+  let data = [];
+  goods.forEach((val, key) => {
+    if (val.id == id) return data = val;
+  });
+  return data;
+};
 
 
 let goodsDetail = (id) => {
@@ -529,6 +691,7 @@ let goodsDetail = (id) => {
     if (goodsData[obj].id == id) return goodsData[obj];
   }
 }
+
 
 let getCartData = () => {
   let data = JSON.parse(localStorage.getItem('cart'));
@@ -578,4 +741,15 @@ let removeAllGoods = () => {
   localStorage.clear();
 }
 
-export {goodsData, goodsDetail, getCartData, addGoodsToCart, getCartNum, removeAllGoods, mallGoods, getMallGoodsDetail}
+export {
+  goodsData,
+  goodsDetail,
+  getCartData,
+  addGoodsToCart,
+  getCartNum,
+  removeAllGoods,
+  mallGoods,
+  getMallGoodsDetail,
+  addToCart,
+  getCartGoods
+}

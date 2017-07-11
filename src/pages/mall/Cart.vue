@@ -6,105 +6,28 @@
     </div>
     <div class="cart-container">
       <div class="cart-store">
-        <div class="cart-store-title">京东自营</div>
+        <!--<div class="cart-store-title">
+          <span class="cart-check-box select-icon-box" :class="{checked:singleCheck(22)}" @click="checkGoods(22)"></span>
+          <span>京东自营</span>
+        </div>-->
         <div class="cart-goods">
-          <div class="cart-goods-list">
+          <div class="cart-goods-list" v-for="(item, index) in cart">
             <div class="cart-goods-check">
-              <span class="cart-check-box" :class="{checked:22 == checked}" @click="checkGoods(22)"></span>
+              <span class="cart-check-box" :class="{checked:singleCheck(index)}" @click="checkGoods(index)"></span>
             </div>
             <div class="cart-goods-img">
-              <img
-                src="//img10.360buyimg.com/n7/s176x176_jfs/t3301/16/1615084619/137077/bc52150e/57d0c513Nd51ff9a3.jpg!q70.jpg"/>
+              <img v-bind:src="item.img" />
             </div>
             <div class="cart-goods-info">
               <div class="cart-goods-name">
-                百狄 工装鞋男士休闲鞋秋冬新款韩版反绒皮低帮小皮鞋英伦大头皮鞋男鞋 棕色 39偏小一码
+                {{item.name}}
               </div>
               <div class="cart-goods-attr">
-                <span>颜色：银色</span>
-                <span>颜色：银色</span>
-
+                <span>{{item.attr}}</span>
               </div>
               <div class="cart-goods-amount">
-                <span class="goods-total-amount">$900</span>
-                <span class="goods-total-num">1</span>
-
-              </div>
-            </div>
-          </div>
-          <div class="cart-goods-list">
-            <div class="cart-goods-check">
-              <span class="cart-check-box" :class="{checked:33 == checked}" @click="checkGoods(33)"></span>
-            </div>
-            <div class="cart-goods-img">
-              <img
-                src="//img10.360buyimg.com/n7/s176x176_jfs/t3301/16/1615084619/137077/bc52150e/57d0c513Nd51ff9a3.jpg!q70.jpg"/>
-            </div>
-            <div class="cart-goods-info">
-              <div class="cart-goods-name">
-                百狄 工装鞋男士休闲鞋秋冬新款韩版反绒皮低帮小皮鞋英伦大头皮鞋男鞋 棕色 39偏小一码
-              </div>
-              <div class="cart-goods-attr">
-                <span>颜色：银色</span>
-                <span>颜色：银色</span>
-
-              </div>
-              <div class="cart-goods-amount">
-                <span class="goods-total-amount">$900</span>
-                <span class="goods-total-num">1</span>
-
-              </div>
-            </div>
-          </div>
-          <div class="cart-goods-list">
-            <div class="cart-goods-check">
-              <span class="cart-check-box" :class="{checked:35 == checked}" @click="checkGoods(35)"></span>
-            </div>
-            <div class="cart-goods-img">
-              <img
-                src="//img10.360buyimg.com/n7/s176x176_jfs/t3301/16/1615084619/137077/bc52150e/57d0c513Nd51ff9a3.jpg!q70.jpg"/>
-            </div>
-            <div class="cart-goods-info">
-              <div class="cart-goods-name">
-                百狄 工装鞋男士休闲鞋秋冬新款韩版反绒皮低帮小皮鞋英伦大头皮鞋男鞋 棕色 39偏小一码
-              </div>
-              <div class="cart-goods-attr">
-                <span>颜色：银色</span>
-                <span>颜色：银色</span>
-
-              </div>
-              <div class="cart-goods-amount">
-                <span class="goods-total-amount">$900</span>
-                <span class="goods-total-num">1</span>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cart-store">
-        <div class="cart-store-title">京东自营</div>
-        <div class="cart-goods">
-          <div class="cart-goods-list">
-            <div class="cart-goods-check">
-              <span class="cart-check-box" :class="{checked:37 == checked}" @click="checkGoods(37)"></span>
-            </div>
-            <div class="cart-goods-img">
-              <img
-                src="//img10.360buyimg.com/n7/s176x176_jfs/t3301/16/1615084619/137077/bc52150e/57d0c513Nd51ff9a3.jpg!q70.jpg"/>
-            </div>
-            <div class="cart-goods-info">
-              <div class="cart-goods-name">
-                百狄 工装鞋男士休闲鞋秋冬新款韩版反绒皮低帮小皮鞋英伦大头皮鞋男鞋 棕色 39偏小一码
-              </div>
-              <div class="cart-goods-attr">
-                <span>颜色：银色</span>
-                <span>颜色：银色</span>
-
-              </div>
-              <div class="cart-goods-amount">
-                <span class="goods-total-amount">$900</span>
-                <span class="goods-total-num">1</span>
+                <span class="goods-total-amount">${{item.price}}</span>
+                <span class="goods-total-num">{{item.num}}</span>
 
               </div>
             </div>
@@ -116,29 +39,31 @@
 </template>
 
 <script>
+  import  {getCartGoods} from  '@/service/goodsData'
   export default{
     data(){
       return {
         checked: 0,
         isCheck: false,
         style: {},
-        arr: []
+        arr: [],
+        cart:[]
       }
+    },
+    mounted(){
+        this.cart = getCartGoods();
     },
     methods: {
       checkGoods(id){
-        this.checked = id;
-        if (this.arr.indexOf(id)<0) this.arr.push(id);
-
-        if (this.isCheck == false) {
-          this.style = this.setStyle();
-          this.isCheck = true
+        if (this.arr.indexOf(id) < 0) {
+          this.arr.push(id);
         } else {
-          this.style = this.delStyle()
-          this.isCheck = false
+          this.arr.splice(this.arr.indexOf(id), 1);
         }
-
-        console.log(this.arr.indexOf(2222));
+      },
+      singleCheck(id){
+        if (this.arr.indexOf(id) < 0) return false;
+        return true;
       },
       setStyle(){
         return {backgroundPosition: '-25px 0px !important'}
@@ -183,9 +108,15 @@
   }
 
   .cart-store-title {
+    display: flex;
+    flex-direction: row;
     padding: 0.5rem 0.1rem 0.5rem 1rem;
     border-bottom: 0.01rem solid #f1f1f1;
     text-align: left;
+  }
+
+  .select-icon-box {
+    margin: 0 0 !important;
   }
 
   .cart-goods-img img {

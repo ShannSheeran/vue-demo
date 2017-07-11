@@ -52,6 +52,7 @@
 
 <script>
   import Input from '@/components/common/BigInput'
+  import  {getMallGoodsDetail} from  '@/service/goodsData'
   export default{
     data(){
       return {
@@ -61,11 +62,19 @@
         gsuit: ['公开版', '双网通'],
         color:'',
         size:'',
-        suit:''
+        suit:'',
+        gid:0,
+        goods:''
       }
     },
     mounted(){
-      //alert(this.$route.params.id);
+      let goods= getMallGoodsDetail(this.$route.params.id);
+      this.gcolor = goods.attr.color;
+      this.gsize = goods.attr.size;
+      this.gsuit = goods.attr.suit;
+      this.goods = goods;
+      //alert(goods.skuId);
+      this.gid = goods.skuId
     },
     props: ['show'],
     methods: {
@@ -73,7 +82,7 @@
         this.num = data
       },
       addToCart(){
-        let goods = {id: 1123, name: 'iPhone7', color: this.color, size: this.size, num: this.num, attr: this.suit};
+        let goods = {id: this.gid, color: this.color, size: this.size, num: this.num, attr: this.suit, name:this.goods.name, img:this.goods.pictureUrl, price:this.goods.pPrice};
         this.$emit('addToCart', {goods: goods, show: false});
       },
       closeSku(){

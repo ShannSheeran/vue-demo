@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-  <div id="goods-detail">
+    <div id="goods-detail">
       <div class="mall-slide">
         <img :src="goods.image"/>
       </div>
@@ -41,12 +41,12 @@
       <div class="mask">
         <mall-mask :show="show" v-on:closeMask="closeMask"></mall-mask>
       </div>
-  </div>
+    </div>
   </transition>
 </template>
 
 <script>
-  import  {getMallGoodsDetail} from  '@/service/goodsData'
+  import  {getMallGoodsDetail, addToCart} from  '@/service/goodsData'
   import Sku from '@/pages/mall/Sku';
   import Mask from '@/components/common/Mask';
   export default{
@@ -68,24 +68,26 @@
         this.show = false;
       },
       addToCart(data){
-        this.cart = data.goods
-        this.num = data.goods.num
-        this.show = data.show
-        this.string = this.cart.color + ' ' + this.cart.size + ' ' + this.cart.attr
+        this.cart = data.goods;
+        this.num = data.goods.num;
+        this.show = data.show;
+        this.string = this.cart.color + ' ' + this.cart.size + ' ' + this.cart.attr;
+        let cartData = {id:this.cart.id, attr:this.string, num:this.num, name:this.cart.name, img:this.cart.img, price:this.cart.price};
+        addToCart(cartData);
       },
       showMask(){
         this.show = true;
       },
       setTitle(t) {
         document.title = t;
-        var i = document.createElement('iframe');
+        let i = document.createElement('iframe');
         i.src = '//m.baidu.com/favicon.ico';
         i.style.display = 'none';
         i.onload = function () {
           setTimeout(function () {
             i.remove();
           }, 9)
-        }
+        };
         document.body.appendChild(i);
       }
     },
@@ -207,13 +209,16 @@
     font-size: 1.5rem;
     font-weight: 500;
   }
+
   .fade-enter-active {
     transition: all 3s ease;
   }
+
   .fade-enter {
     transform: translate3d(0, 0, 0);
   }
-  .mall-view-cart{
+
+  .mall-view-cart {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -221,7 +226,8 @@
     padding: 0.7rem 0.7rem;
     background: #f02b2b;
   }
-  .mall-view-cart a{
+
+  .mall-view-cart a {
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
