@@ -16,7 +16,7 @@
               <span class="cart-check-box" :class="{checked:singleCheck(index)}" @click="checkGoods(index)"></span>
             </div>
             <div class="cart-goods-img">
-              <img v-bind:src="item.img" />
+              <img v-bind:src="item.img"/>
             </div>
             <div class="cart-goods-info">
               <div class="cart-goods-name">
@@ -47,11 +47,14 @@
         isCheck: false,
         style: {},
         arr: [],
-        cart:[]
+        cart: []
       }
     },
     mounted(){
-        this.cart = getCartGoods();
+      this.cart = getCartGoods();
+      this.cart.forEach((v, index) => {
+        this.arr.push(index);
+      });
     },
     methods: {
       checkGoods(id){
@@ -65,12 +68,6 @@
         if (this.arr.indexOf(id) < 0) return false;
         return true;
       },
-      setStyle(){
-        return {backgroundPosition: '-25px 0px !important'}
-      },
-      delStyle(){
-        return {}
-      }
     }
   }
 </script>
